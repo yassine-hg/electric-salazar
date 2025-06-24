@@ -1,0 +1,150 @@
+/* cart.css */
+
+body {
+  background: #121c5c;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  margin: 3rem auto;
+  max-width: 950px;
+  width: 90%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+  border-radius: 1rem;
+  background: #fff;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.cart {
+  flex: 8;
+  padding: 5rem 15rem 5rem ;
+  
+}
+
+.summary {
+  flex: 2;
+  background: #f3f3f3;
+  padding: 8rem;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+}
+
+.title h4 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.text-muted {
+  color: #777;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.row.border-top {
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.row.border-bottom {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+  margin-bottom: 0;
+}
+
+.cart .main {
+  width: 100%;
+}
+
+.cart .col-2 {
+  flex: 0 0 70px;
+  max-width: 70px;
+}
+
+.cart img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+}
+
+.cart .col {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.cart .col:nth-child(3) { 
+  flex: 0 0 auto;
+}
+
+.cart a {
+  text-decoration: none;
+  color: #000;
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+
+.cart .border {
+  padding: 0 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.close {
+  margin-left: auto;
+  color: #aaa;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.close:hover {
+  color: #d9534f;
+}
+
+.back-to-shop {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #7d7d7d;
+  text-decoration: none;
+}
+.back-to-shop:hover {
+  color: #111;
+}
+
+
+#code {
+  background-image: url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background: #0c2c50;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+.summary button.btn:hover {
+  background: #222;
+}
