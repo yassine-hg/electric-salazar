@@ -28,9 +28,9 @@ def batteries_page(request):
 
 def batterie_elements(request, id):
     batterie_info = batterie.objects.get(id=id)
-    batterie_image_detail = batterie_image.objects.filter(batterie=batterie_image) 
+    batterie_image_detail = batterie_image.objects.filter(batterie=batterie_info) 
     context = {
-        'batterie_infor': batterie_info,
+        'batterie_info': batterie_info,
         'batterie_iamge_detail': batterie_image_detail
     }
     return render(request, 'products/batterie_details.html', context)

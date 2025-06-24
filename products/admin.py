@@ -3,6 +3,7 @@ from .models import productsInfo
 from .models import BikesDetails
 from .models import BikeImage
 from .models import batterie
+from .models import batterie_image
 
 # Register your models here.
 
@@ -17,6 +18,7 @@ admin.site.register(productsInfo)
 admin.site.register(BikesDetails, BikesDetailAdmin)
 admin.site.register(BikeImage)
 admin.site.register(batterie)
+admin.site.register(batterie_image)
 
 
 

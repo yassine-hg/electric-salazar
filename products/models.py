@@ -20,6 +20,7 @@ class productsInfo(models.Model):
         return self.name
     
 class BikesDetails(models.Model):
+    name = models.CharField(max_length=455)
     image = models.ImageField(upload_to='bikesdetails')
     Description = models.TextField(max_length=455)
     technicalDescription = models.TextField(max_length=255)
