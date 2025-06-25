@@ -13,11 +13,17 @@ class BikeImageInline(admin.TabularInline):
 class BikesDetailAdmin(admin.ModelAdmin):
     inlines = [BikeImageInline]
 
+class batterieImageInline(admin.TabularInline):
+    model = batterie_image
+    extra = 10
+class batterieDetailAdmin(admin.ModelAdmin):
+    inlines = [batterieImageInline]
+
 
 admin.site.register(productsInfo)
 admin.site.register(BikesDetails, BikesDetailAdmin)
 admin.site.register(BikeImage)
-admin.site.register(batterie)
+admin.site.register(batterie, batterieDetailAdmin)
 admin.site.register(batterie_image)
 
 

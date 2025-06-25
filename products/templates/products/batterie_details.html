@@ -15,9 +15,9 @@
         <div class="col-md-6">
             <div id="bikeCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    {% for image in batterie_iamge_detail %}
+                    {% for image in batterie_image_detail %}
                         <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                            <img src="{{ batterie.image.url }}" class="d-block w-100 rounded" style="height: 500px; object-fit: cover;" alt="Bike image">
+                            <img src="{{ image.image.url }}" class="d-block w-100 rounded" style="height: 500px; object-fit: cover;" alt="Bike image">
                         </div>
                     {% endfor %}
                 </div>
@@ -34,7 +34,7 @@
 
         <!-- RIGHT: Product details -->
         <div class="col-md-6">
-            <h1 class="fw-bold">Lapierre Overvolt Explorer 600</h1>
+            <h1 class="fw-bold">{{ batterie_info.name }}</h1>
             <br>
             <br>
             <h3 class="fw-bold text-dark mb-3">{{ batterie_info.price }} DH</h3>
