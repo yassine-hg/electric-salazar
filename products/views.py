@@ -5,6 +5,8 @@ from .models import BikesDetails
 from .models import BikeImage
 from .models import batterie
 from .models import batterie_image
+from .models import trotinette_electrique
+from .models import trotinette_image
 # Create your views here.
 
 def homepage(request):
@@ -34,3 +36,14 @@ def batterie_elements(request, id):
         'batterie_image_detail': batterie_image_detail
     }
     return render(request, 'products/batterie_details.html', context)
+def trotinette_page(request):
+    trotinette_element = trotinette_electrique.objects.all()
+    return render(request, 'products/trotinette.html', {'trotinette_element': trotinette_element})
+def trotinette_elements(request, id):
+    trotinettes = trotinette_electrique.objects.get(id=id)
+    trotinette_images = trotinette_image.objects.filter(trotinette=trotinettes)
+    context = {
+        'trotinettes': trotinettes,
+        'trotinette_images' : trotinette_images
+    }
+    return render(request, 'products/trotinette_details.html', context)

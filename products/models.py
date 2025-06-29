@@ -47,6 +47,21 @@ class batterie_image(models.Model):
     batterie = models.ForeignKey(batterie, on_delete=CASCADE)
     def __str__(self):
         return str(self.image)
+    
+class trotinette_electrique(models.Model):
+    image = models.ImageField(upload_to="trotinette")
+    name = models.TextField(max_length=255)
+    description = models.TextField(max_length=455)
+    price = models.DecimalField(max_digits=30, decimal_places=2)
+    def __str__(self):
+        return str(self.name)
+    
+class trotinette_image(models.Model):
+    image = models.ImageField(upload_to="trotinette")
+    trotinette = models.ForeignKey(trotinette_electrique, on_delete=CASCADE)
+    
+    def __str__(self):
+        return str(self.image)
 
     
 

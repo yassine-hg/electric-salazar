@@ -9,6 +9,8 @@ urlpatterns = [
     path('products/<int:id>/', views.Pagebikes, name="PageBikes"),
     path('batteries/', views.batteries_page, name='batteries_page'),
     path('batteries/<int:id>/', views.batterie_elements, name="batterie_elements"),
+    path('trotinette/', views.trotinette_page, name="trotinette_page"),
+    path('trotinette/<int:id>', views.trotinette_elements, name='trotinette_elements'),
 ]
 
 if settings.DEBUG:

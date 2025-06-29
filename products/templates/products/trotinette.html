@@ -78,7 +78,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 animate-box text-center">
-						<h2 class="intro-heading">Bicyclette Disponible</h2>
+						<h2 class="intro-heading">Trotinette Disponible</h2>
 					</div>
 				</div>
 			</div>
@@ -88,15 +88,15 @@
 		<div id="fh5co-product-section">
 			<div class="container">
 				<div class="row">
-					{% for product in products %}
+					{% for element in trotinette_element %}
 					<div class="col-md-4 prod text-center animate-box">
-						<div class="product" style="background-image: url('{{ product.image.url }}');">
-							<a href="{% url 'PageBikes' product.id %}" class="view">
+						<div class="product" style="background-image: url('{{ element.image.url }}');">
+							<a href="{% url 'trotinette_elements' element.id %}" class="view">
 								<i class="icon-plus"></i>
 							</a>
 						</div>
-						<h3><a href="{% url 'PageBikes' product.id %}" >{{ product.name }}</a></h3>
-						<span class="price">{{ product.price }} $</span>
+						<h3><a href="{% url 'trotinette_elements' element.id %}" >{{ element.name }}</a></h3>
+						<span class="price">{{ element.price }} DH</span>
 					</div>
 					{% endfor %}
 				</div>
