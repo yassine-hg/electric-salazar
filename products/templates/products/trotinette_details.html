@@ -44,7 +44,7 @@
             
 
             {% if user.is_authenticated %}
-                <a href="{% url 'add_cart' 'bike' description.id %}" class="btn btn-primary mt-3" >Ajouter a la catre</a>
+                <a href="{% url 'add_cart' 'trotinette' trotinettes.id %}" class="btn btn-primary mt-3" >Ajouter a la catre</a>
             {% else %}
                 <a href="{% url 'signup' %}" class="btn btn-primary mt-3">Crée votre compt pour <br>ajouter vos produits a la cart </a>
             {% endif %}

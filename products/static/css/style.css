@@ -665,7 +665,7 @@ header .fh5co-navbar-brand .fh5co-logo:active, header .fh5co-navbar-brand .fh5co
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 12px;
+  font-size: 55px;
 }
 
 #fh5co-contact-section,
@@ -1016,5 +1016,21 @@ input[type="text"] {
 .js .animate-box {
   opacity: 0;
 }
+.product {
+     /* centers horizontally */
+}
 
 /*# sourceMappingURL=style.css.map */
+/* About section tweaks */
+.about-underline{
+  height: 6px;
+  width: 120px;
+  background: #28c0c9;
+  border-radius: 10px;
+}
+
+.about-img{
+  aspect-ratio: 1 / 1;      
+  object-fit: cover;        
+  display: block;
+}

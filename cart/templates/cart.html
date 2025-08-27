@@ -64,7 +64,10 @@
                     <div class="col">TOTAL PRICE</div>
                     <div class="col text-right">{{ total_price }} dh</div>
                 </div>
-                <button class="btn">COMMANDER</button>
+                    <form method="post" action="{% url 'store_order' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-success">Commander </button>
+                    </form>
                 <br>
                 <br>
                 <div class="back-to-shop">
