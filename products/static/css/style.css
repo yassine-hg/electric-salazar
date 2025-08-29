@@ -1034,3 +1034,19 @@ input[type="text"] {
   object-fit: cover;        
   display: block;
 }
+.logo-img {
+  max-width: 180px;   /* default size for small screens */
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .logo-img {
+    max-width: 300px;  /* larger on tablets */
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo-img {
+    max-width: 600px;  /* full size only on large desktop */
+  }
+}

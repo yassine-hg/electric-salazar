@@ -15,18 +15,18 @@ class electricBicycle(models.Model):
 class productsInfo(models.Model):
     image = models.ImageField(upload_to='product_images/')
     name = models.TextField(max_length=30)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
     def __str__(self):
         return self.name
     
 class BikesDetails(models.Model):
     name = models.CharField(max_length=455)
     image = models.ImageField(upload_to='bikesdetails')
-    Description = models.TextField(max_length=455)
-    technicalDescription = models.TextField(max_length=255)
-    price = models.DecimalField(max_digits=30, decimal_places=2)
+    kilometrage = models.CharField(max_length=255)
+    annee = models.CharField(max_length=255)
+    puissance = models.CharField(max_length=255)
+    couleur = models.CharField(max_length=255)
     def __str__(self):
-        return self.Description
+        return self.name
     
 class BikeImage(models.Model):
     image = models.ImageField(upload_to="Bike image")
